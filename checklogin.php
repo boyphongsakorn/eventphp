@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
       <script>
         Swal.fire(
             'เกิดข้อผิดพลาด',
-            'รหัสผ่านไม่ถูกต้อง',
+            'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง',
             'error'
         ).then((result) => {
             window.history.back();
@@ -56,7 +56,18 @@ if ($result->num_rows > 0) {
       }
     }
   } else {
-    echo "0 results";
+    //echo "0 results";
+    ?>
+    <script>
+      Swal.fire(
+        'เกิดข้อผิดพลาด',
+        'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง',
+        'error'
+      ).then((result) => {
+        window.history.back();
+      })
+    </script>
+    <?
   }
 }
 

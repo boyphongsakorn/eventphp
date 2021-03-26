@@ -41,13 +41,34 @@ if(!isset($_SESSION["adminname"]))
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#devview">อุปกรณ์</a>
       </li>
-      <li class="nav-item">
+      <!--li class="nav-item">
         <a class="nav-link" href="devscan.php">สแกนอุปกรณ์เข้างาน</a>
+      </li-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        สแกนอุปกรณ์
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="devscan.php">เข้างาน</a>
+          <a class="dropdown-item" href="devee.php">ออกจากงาน</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="topup.php">เติมเงิน</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="payforproduct.php">สแกนซื้อสินค้า</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#ageview">ตั้งค่าระบบ</a>
       </li>
-      <!--li class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link"  href="mainreport.php">รายงาน</a>
+      </li>
+      <!--li class="nav-item">
+        <a class="nav-link"  href="report.php">รายงาน</a>
+      </li>
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           อื่นๆ
         </a>

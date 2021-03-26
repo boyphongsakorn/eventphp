@@ -34,8 +34,23 @@ include 'config.php';
       <li class="nav-item">
         <a class="nav-link" href="dashboard.php">หน้าจัดการ <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <!--li class="nav-item active">
         <a class="nav-link" href="devscan.php">สแกนอุปกรณ์</a>
+      </li-->
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        สแกนอุปกรณ์
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="devscan.php">เข้างาน</a>
+          <a class="dropdown-item" href="devee.php">ออกจากงาน</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="topup.php">เติมเงิน</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="payforproduct.php">สแกนซื้อสินค้า</a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -180,6 +195,9 @@ include 'config.php';
           }
           if(data == '0.3'){
             alert('ไม่มีอุปกรณ์นี้อยู่ในระบบ')
+          }
+          if(data == '1'){
+            alert('เช็คเข้าร่วมงานเรียบร้อยแล้ว')
           }
           alert("Data: " + data + "\nStatus: " + status);
         });
